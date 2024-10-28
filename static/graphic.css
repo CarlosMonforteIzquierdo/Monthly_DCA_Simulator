@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ede7e3;
+}
+h1{
+    text-align: center;
+}
+
+canvas {
+    display: block;
+    margin: 0 10vw;
+    padding: 20px;
+    max-width: 90%; /* Controla el ancho máximo del canvas */
+    max-height: 70vh; /* Controla el alto máximo del canvas */
+    text-align: center;
+    border: 1px solid #ddd; /* Añade un borde ligero al canvas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#info{
+    display: flex;
+    justify-content: center;
+}
+.investment-info{
+    display: block;
+    width: auto;
+    text-align: center; /* Centrar el texto */
+    font-size: 18px; /* Tamaño de fuente */
+    font-weight: 500; /* Un poco más grueso que normal */
+    color: #333; /* Color del texto */
+    margin: 10px; /* Margen vertical entre los párrafos */
+    padding: 10px;
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #f5f5f5; /* Fondo claro para resaltar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}

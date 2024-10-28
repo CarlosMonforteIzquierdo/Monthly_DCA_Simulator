@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Investment Growth Chart</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='set_data.css') }}">
+    </head>
+        <body>
+            <h1>Monthly DCA Simulator</h1>
+            <div id="input-data">
+                <form action="{{url_for('set_data')}}" method="POST">
+                    <p>Name of the ticket:</p>
+                    <input type="text" name="ticker">
+                    <p>Amount of $ invested per month:</p>
+                    <input type="text" name="amount">
+                    <p>Start year:</p>
+                    <input type="text" name="start_year">
+                    <p>End year:</p>
+                    <input type="text" name="end_year">
+                    <input type="submit" value="Show"> 
+                </form>
+            </div>
+
+            <div id="popular-tickets-container">
+            <h2 id="popular-tickets-title">Popular tickets</h2>
+            <p id="popular-tickets">S&P500:IVV | Apple:AAPL | NVDIA:NVDA | Microsoft:MSFT | Google:GOOG | Amazon:AMZN | Meta:META | Taiwan Semiconductor:TSM | Tesla:TSLA | Walmart:WMT | JPMorgan Chase:JPM | Oracle:ORCL | Home Depot:HD | Costco:COST | Johnson & Johnso:JNJ | Netflix:NFLX | Pepsi:PEP |  Astrazeneca:AZN | Alibaba:BABA | Toyota Motors: TM | Cisco SystemsCSCO | McDonald's:MCD
+            </p>
+            </div>
+        </body>
+</html>

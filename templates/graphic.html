@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Investment Growth Chart</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='graphic.css') }}">
+    </head>
+    <body>
+        <h1>Dollar Cost Averaging for {{ ticker }}</h1>
+        <div>
+        <canvas id="investmentChart" ></canvas>
+        </div>
+        <div id="info">
+            <p class="investment-info">Money invested per month: ${{ amount_per_month }}</p>
+            <p class="investment-info">Total money invested: ${{ total_investment }}</p>
+            <p class="investment-info">Final value: ${{ final_portfolio_value }}</p>
+            <p class="investment-info">Total profit: ${{ total_profit }}</p>
+        </div>
+
+        <script>
+            const dates = {{ dates | safe }};
+            const portfolioValues = {{ portfolio_values | safe }};
+            const investedAmounts = {{ invested_amounts | safe }};
+            const ticker = "{{ ticker }}";
+        </script>
+        
+        <!-- Cargar el script externo -->
+        <script src="{{ url_for('static', filename='graphic.js') }}"></script>
+    </body>
+</html>

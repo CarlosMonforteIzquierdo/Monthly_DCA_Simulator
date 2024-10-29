@@ -9,7 +9,7 @@
     </head>
     <body>
         <h1>Dollar Cost Averaging for {{ ticker }}</h1>
-        <div>
+        <div id="canvas-div">
         <canvas id="investmentChart" ></canvas>
         </div>
         <div id="info">
@@ -28,5 +28,13 @@
         
         <!-- Cargar el script externo -->
         <script src="{{ url_for('static', filename='graphic.js') }}"></script>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="{{ url_for('set_data') }}" style="text-decoration: none;">
+                <button style="padding: 10px 20px; font-size: 16px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    Go back
+                </button>
+            </a>
+        </div>
     </body>
 </html>

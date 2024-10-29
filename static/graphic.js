@@ -21,8 +21,10 @@ const chart = new Chart(ctx, {
     },
     options: {
         responsive: true,
+        maintainAspectRatio: false,
         plugins: {
             legend: {
+                display:true,
                 position: 'top',
             },
             title: {
@@ -31,4 +33,12 @@ const chart = new Chart(ctx, {
             }
         }
     }
+});
+
+let resizeTimeout;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+        myChart.resize(); // Ajusta el gráfico al nuevo tamaño
+    }, 100); // Ajuste de 200ms
 });

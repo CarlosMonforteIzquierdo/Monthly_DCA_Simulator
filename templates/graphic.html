@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='graphic.css') }}">
     </head>
     <body>
-        <h1>Dollar Cost Averaging for {{ ticker }}</h1>
+        <h1>Dollar Cost Averaging for {{ ticker.upper() }}</h1>
         <div id="canvas-div">
         <canvas id="investmentChart" ></canvas>
         </div>

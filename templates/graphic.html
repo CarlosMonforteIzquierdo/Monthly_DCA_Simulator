@@ -13,10 +13,10 @@
         <canvas id="investmentChart" ></canvas>
         </div>
         <div id="info">
-            <p class="investment-info">Money invested per month: ${{ amount_per_month }}</p>
-            <p class="investment-info">Total money invested: ${{ total_investment }}</p>
-            <p class="investment-info">Final value: ${{ final_portfolio_value }}</p>
-            <p class="investment-info">Total profit: ${{ total_profit }}</p>
+            <p class="investment-info">Money invested per month: ${{ "{:,}".format(amount_per_month) }}</p>
+            <p class="investment-info">Total money invested: ${{ "{:,}".format(total_investment) }}</p>
+            <p class="investment-info">Final value: ${{ "{:,}".format(final_portfolio_value) }}</p>
+            <p class="investment-info">Total profit: ${{ "{:,}".format(total_profit) }}</p>
         </div>
 
         <script>

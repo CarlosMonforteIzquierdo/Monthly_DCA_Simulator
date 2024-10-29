@@ -16,6 +16,18 @@ def set_data():
         amount = request.form.get('amount')
         start_year = request.form.get('start_year')
         end_year = request.form.get('end_year')
+
+        #Falta comprobar el ticket
+        try:
+            amount = float(amount)
+            start_year = int(start_year)
+            end_year = int(end_year)
+        except ValueError:
+            return render_template('wrong_input.html')
+        
+        if int(start_year) > 2024 or int(start_year) < 1990 or int(start_year) >= int(end_year) or int(end_year) > 2024:
+            return render_template('wrong_input.html')
+        
         return redirect(url_for('calculateDCA', ticker=ticker, amount=int(amount), start_year=start_year, end_year=end_year))
         
 
@@ -51,6 +63,7 @@ def calculateDCA(ticker, amount, start_year,end_year):
     dca_df = pd.DataFrame(dca_log)
     final_portfolio_value = total_shares * data.iloc[-1]['Adj Close']
     total_profit = final_portfolio_value - total_investment
+    
 
     #Retornar datos como JSON
     return render_template('graphic.html',

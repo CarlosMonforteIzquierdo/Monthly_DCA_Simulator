@@ -59,26 +59,26 @@ h1{
     background-color: #45a045;
 }
 
-#popular-tickets-container {
+#disclaimer-container {
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     margin: 1rem 0;
     position: relative;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
 }
-#popular-tickets-title {
+#disclaimer-title {
     text-align: center;
     padding: 10px;
     color: #4a4a4a; /* Color del texto: gris oscuro */
     font-weight: bold;
-    font-size: 20px;
+    font-size: 24px;
     border-radius: 5px; /* Bordes ligeramente redondeados */
 }
 
-#popular-tickets {
+#disclaimer-message {
     text-align: center;
     padding-right: 12rem;
     padding-left: 12rem;
-    font-size: 24px;
+    font-size: 20px;
     color: #333;
 }

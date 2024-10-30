@@ -10,21 +10,44 @@
             <h1>Monthly DCA Simulator</h1>
             <div id="input-data">
                 <form action="{{url_for('set_data')}}" method="POST">
-                    <p>Name of the ticket:</p>
-                    <input type="text" name="ticker">
+                    <p>Shares:</p>
+                    <select name="ticker">
+                        <option value="IVV">S&P500</option>
+                        <option value="AAPL">Apple</option>
+                        <option value="NVDA">NVIDIA</option>
+                        <option value="MSFT">Microsoft</option>
+                        <option value="GOOG">Google</option>
+                        <option value="AMZN">Amazon</option>
+                        <option value="META">Meta</option>
+                        <option value="TSM">Taiwan Semiconductor</option>
+                        <option value="TSLA">Tesla</option>
+                        <option value="WMT">Walmart</option>
+                        <option value="JPM">JPMorgan Chase</option>
+                        <option value="ORCL">Oracle</option>
+                        <option value="HD">Home Depot</option>
+                        <option value="COST">Costco</option>
+                        <option value="JNJ">Johnson & Johnson</option>
+                        <option value="NFLX">Netflix</option>
+                        <option value="PEP">Pepsi</option>
+                        <option value="AZN">AstraZeneca</option>
+                        <option value="BABA">Alibaba</option>
+                        <option value="TM">Toyota Motors</option>
+                        <option value="CSCO">Cisco Systems</option>
+                        <option value="MCD">McDonald's</option>
+                    </select>
                     <p>Amount of $ invested per month:</p>
-                    <input type="text" name="amount">
+                    <input type="text" name="amount" placeholder="$">
                     <p>Start date:</p>
-                    <input type="date" name="start_date" min="2000-01-01" max="2023-12-12">
+                    <input type="date" name="start_date" value="2000-01-01"min="2000-01-01" max="2023-12-12">
                     <p>End date:</p>
-                    <input type="date" name="end_date" min="2000-01-01" max="2024-10-15">
+                    <input type="date" name="end_date" value="2024-01-31" min="2000-01-01" max="2024-10-15">
                     <input type="submit" value="Show"> 
                 </form>
             </div>
 
             <div id="popular-tickets-container">
             <h2 id="popular-tickets-title">Popular tickets</h2>
-            <p id="popular-tickets">S&P500:IVV | Apple:AAPL | NVDIA:NVDA | Microsoft:MSFT | Google:GOOG | Amazon:AMZN | Meta:META | Taiwan Semiconductor:TSM | Tesla:TSLA | Walmart:WMT | JPMorgan Chase:JPM | Oracle:ORCL | Home Depot:HD | Costco:COST | Johnson & Johnso:JNJ | Netflix:NFLX | Pepsi:PEP |  Astrazeneca:AZN | Alibaba:BABA | Toyota Motors: TM | Cisco SystemsCSCO | McDonald's:MCD
+            <p id="popular-tickets">Not financial advise message
             </p>
             </div>
         </body>

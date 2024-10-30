@@ -18,6 +18,8 @@ def set_data():
         end_date = request.form.get('end_date')
 
         #Falta comprobar el ticket
+        if start_date >= end_date:
+            return render_template('wrong_input.html')
         try:
             amount = float(amount)
         except ValueError:

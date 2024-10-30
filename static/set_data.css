@@ -23,23 +23,37 @@ h1{
     font-weight: bold;
 }
 #input-data input[type="text"],
-#input-data input[type="number"] {
-    width: 80%;
-    padding: 8px;
-    margin-bottom: 5px;
+#input-data input[type="number"],
+#input-data input[type="date"],
+#input-data select {
+    width: 83%;
+    padding: 10px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 3px;
+    border-radius: 5px;
     appearance: none;
+    font-size: 16px;
+    background-color: #fff; /* Fondo blanco */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+#input-data select{
+    width: 90%;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"%3E%3Cpath fill="%23999" d="M4 6l4 4 4-4z"/%3E%3C/svg%3E'); /* Flecha de desplegable */
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px;
+    cursor: pointer;
 }
 #input-data input[type="submit"] {
-    width: 60%;
-    padding: 8px;
+    width: 70%;
+    padding: 10px;
     margin-top: 1rem;
-    border-radius: 3px;
+    border-radius: 5px;
     background-color: #4CAF50;
     color: white;
     font-size: 16px;
     cursor: pointer;
+    border: none;
 }
 #input-data input[type="submit"]:hover {
     background-color: #45a045;

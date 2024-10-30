@@ -14,28 +14,19 @@ def set_data():
     else:
         ticker = request.form.get('ticker')
         amount = request.form.get('amount')
-        start_year = request.form.get('start_year')
-        end_year = request.form.get('end_year')
+        start_date = request.form.get('start_date')
+        end_date = request.form.get('end_date')
 
         #Falta comprobar el ticket
         try:
             amount = float(amount)
-            start_year = int(start_year)
-            end_year = int(end_year)
         except ValueError:
             return render_template('wrong_input.html')
+        return redirect(url_for('calculateDCA', ticker=ticker, amount=int(amount), start_date=start_date, end_date=end_date))
         
-        if int(start_year) > 2024 or int(start_year) < 1990 or int(start_year) >= int(end_year) or int(end_year) > 2024:
-            return render_template('wrong_input.html')
-        
-        return redirect(url_for('calculateDCA', ticker=ticker, amount=int(amount), start_year=start_year, end_year=end_year))
-        
-
-@app.route('/monthlyDCA/<ticker>/<int:amount>/<int:start_year>/<int:end_year>')
-def calculateDCA(ticker, amount, start_year,end_year):
+@app.route('/monthlyDCA/<ticker>/<int:amount>/<start_date>/<end_date>')
+def calculateDCA(ticker, amount, start_date,end_date):
     
-    start_date = str(start_year)+'-01-01'
-    end_date = str(end_year)+'-01-01'
     interval = '1M'
     
     # Obtiene los datos de yfinance

@@ -26,10 +26,6 @@ const chart = new Chart(ctx, {
             legend: {
                 display:true,
                 position: 'top',
-            },
-            title: {
-                display: true,
-                text: `Dollar Cost Averaging for ${ticker}`
             }
         }
     }

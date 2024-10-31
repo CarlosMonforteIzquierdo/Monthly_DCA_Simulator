@@ -1,0 +1,52 @@
+/* Estilos generales para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8d7da; /* Fondo ligero con tono de advertencia */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor principal de la página de error */
+#error-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Título principal */
+#error-container h1 {
+    color: #d32f2f; /* Rojo oscuro para advertencia */
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Mensajes de error */
+#error-container p {
+    color: #333;
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+/* Estilos para el botón de retroceso */
+#error-container button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+/* Efecto al pasar el cursor sobre el botón */
+#error-container button:hover {
+    background-color: #388e3c;
+}
